@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-
-class Item {
-  final String name;
-  final IconData icon;
-  final Color color;
-
-  Item(this.name, this.icon, this.color);
-}
+import 'package:kepomon_mobile/screens/itemlist.dart';
+import 'package:kepomon_mobile/widgets/left_drawer.dart';
+import 'package:kepomon_mobile/widgets/item_card.dart';
+import 'package:kepomon_mobile/screens/itemlist_form.dart';
 
 class ItemCard extends StatelessWidget {
   final Item item;
@@ -18,11 +14,20 @@ class ItemCard extends StatelessWidget {
     return Material(
       color: item.color,
       child: InkWell(
+        // Area responsive terhadap sentuhan
         onTap: () {
+          // Memunculkan SnackBar ketika diklik
           ScaffoldMessenger.of(context)
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
+          if (item.name == "Tambah Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ItemFormPage()));
+          } else if (item.name == "Lihat Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ItemListPage()));
+          }
         },
         child: Container(
           padding: const EdgeInsets.all(8),
@@ -98,6 +103,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
       ),
+      drawer: const LeftDrawer(),
     );
   }
 }
