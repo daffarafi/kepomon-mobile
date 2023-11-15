@@ -1,4 +1,43 @@
 <details>
+<summary>Tugas 8</summary>
+
+### Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+- Navigator.push(): Metode ini digunakan untuk menambahkan halaman baru ke dalam tumpukan navigasi. Ini membuat halaman baru ditumpuk di atas halaman saat ini, dan pengguna dapat kembali ke halaman sebelumnya.
+- Navigator.pushReplacement(): Metode ini digunakan untuk menggantikan halaman saat ini dengan halaman baru. Ini berguna ketika ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman saat ini dari stack.
+
+### Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+- Container: Digunakan untuk mengelompokkan dan mendekorasi widget lain.
+- Column dan Row: Digunakan untuk menata widget secara vertikal (Column) atau horizontal (Row).
+- ListView: Digunakan untuk menampilkan daftar widget secara berurutan, dapat di-scroll.
+- Stack: Mengizinkan penumpukan widget di atas satu sama lain.
+- GridView: Menampilkan widget dalam susunan kotak yang dapat di-scroll.
+
+### Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+Pada tugas kali ini, elemen input yang digunakan dalam formulir (Form) adalah sebagai berikut:
+- TextFormField untuk Nama Item
+- TextFormField untuk Harga
+- TextFormField untuk Jumlah
+- TextFormField untuk Deskripsi
+Setiap elemen input ini memainkan peran dalam mengumpulkan informasi dari pengguna terkait item yang akan ditambahkan. Penggunaan TextFormField memungkinkan pengguna untuk memberikan input teks dan memberikan pemberitahuan visual melalui label dan dekorasi. Validasi diterapkan untuk memastikan data yang dimasukkan sesuai dengan format yang diharapkan.
+
+### Bagaimana penerapan clean architecture pada aplikasi Flutter?
+Clean Architecture adalah metodologi pengembangan perangkat lunak yang memisahkan aplikasi menjadi beberapa lapisan (presentation, domain, dan data) untuk meningkatkan keterbacaan, skalabilitas, dan pemeliharaan. Dalam konteks Flutter, implementasi Clean Architecture melibatkan:
+Presentation Layer: Berisi widget, UI, dan logika UI. Presenter berkomunikasi dengan use case.
+Domain Layer: Berisi bisnis logic dan aturan. Use case dan entity didefinisikan di sini.
+Data Layer: Berisi repository dan implementasi data, baik lokal maupun jarak jauh.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+1. Memisahkan isi dari menu.dart menjadi beberapa file berdasarkan clean architecture (folder screens dan widgets).
+2. Buat navigasi dengan memberikan fungsi Navigator.push() serta membuat left_drawer untuk navigasi.
+3. Buat page itemlist_form untuk halaman form menambahkan item baru.
+4. buat itemlist.dart untuk halaman menampilkan daftar item yang sudah ditambahkan.
+5. buat item_model.dart untuk model item yang baru ditambahkan.
+6. Sesuaikan kembali navigasi agar pengguna dapat membuka halaman-halaman yang baru saja dibuat.
+
+
+</details>
+
+<details>
 <summary>Tugas 7</summary>
 
 ### Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
