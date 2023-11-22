@@ -1,4 +1,36 @@
 <details>
+<summary>Tugas 9</summary>
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, Data dapat diambil tanpa membuat model terlebih dahulu. Ini dapat dilakukan dengan menggunakan metode seperti jsonDecode untuk mengonversi data JSON menjadi objek Dart yang dinamis (Map atau List<dynamic>). Namun, membuat model memiliki keuntungan, seperti memberikan tipe data yang kuat, memudahkan refaktor, dan meningkatkan kejelasan kode.
+
+### Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+CookieRequest digunakan untuk mengelola cookie dalam permintaan HTTP. Membagikan instance CookieRequest ke semua komponen di aplikasi mungkin diperlukan untuk memastikan konsistensi dan integritas dalam manajemen cookie, misalnya, ketika ada beberapa bagian aplikasi yang membutuhkan informasi otentikasi yang sama.
+
+### Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+Pengambilan data dari JSON hingga tampil di Flutter melibatkan langkah-langkah seperti membuat permintaan HTTP menggunakan metode seperti http.get, mendecode respons JSON menggunakan jsonDecode, dan kemudian mengintegrasikan data ke dalam widget Flutter seperti ListView.builder atau FutureBuilder untuk menampilkan data tersebut.
+
+### Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+Mekanisme autentikasi melibatkan pengiriman permintaan otentikasi dari Flutter ke Django. Django kemudian memverifikasi kredensial, menghasilkan token otentikasi, dan mengembalikannya ke Flutter. Flutter menyimpan token ini dan menggunakannya dalam setiap permintaan yang memerlukan otentikasi.
+
+### Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+- MaterialApp: Menetapkan dasar aplikasi Flutter.
+- Scaffold: Menyediakan struktur dasar halaman.
+- ListView.builder: Membangun daftar item dengan tata letak dinamis.
+- GestureDetector: Menangani interaksi ketika item di tap.
+- Container: Menyediakan wadah visual untuk item dalam daftar.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+1. Sesuaikan proyek django agar memiliki endpoint yang dibutuhkan untuk aplikasi flutter.
+2. Buat halaman login, buat aplikasi menampilkan halaman login untuk pertama kali.
+3. Sesuaikan agar upload item menggunakan fungsi django.
+4. Buat fitur logout.
+5. Buat data yang ditampilkan pada Item List menggunakan data yang dipanggil pada Django.
+6. Buat detail item.
+
+</details>
+
+<details>
 <summary>Tugas 8</summary>
 
 ### Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
